@@ -7,7 +7,7 @@
     "start": "pm2 start . --attach --name KRIZ-BOT-INC",
     "stop": "pm2 stop . --attach --name KRIZ-BOT-INC"
   },
-  "author": "ASWIN SPARKY",
+  "author": "Ananth Kriz",
   "license": "ISC",
   "repository": {
     "type": "git",

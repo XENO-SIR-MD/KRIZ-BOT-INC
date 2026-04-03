@@ -31,12 +31,12 @@
     "STICKER_DATA": {
       "description": "Set the Sticker Pack name and Author name (Format: PackName;AuthorName).",
       "required": false,
-      "value": "X BOT MD;ASWIN SPARKY"
+      "value": "KRIZ BOT INC;Ananth Kriz"
     },
     "BOT_INFO": {
       "description": "Customize bot menu information (Format: BotName;OwnerName;ImageURL).",
       "required": false,
-      "value": "KRIZ-BOT-INC;ASWIN SPARKY;https://url.aswinsparky.qzz.io/sparky.jpg"
+      "value": "KRIZ-BOT-INC;Ananth Kriz;https://files.catbox.moe/e2oxac.jpg"
     },
     "ALWAYS_ONLINE": {
       "description": "Set to 'true' to keep bot always online, or 'false' to stay offline until a message is received.",
