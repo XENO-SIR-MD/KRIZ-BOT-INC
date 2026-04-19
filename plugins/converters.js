@@ -5,42 +5,25 @@ const config = require('../config.js');
 const lang = getString('converters');
 
 Sparky({
-  name: "url",
-  fromMe: true,
-  desc: "Upload media and get URL",
-  category: "tools",
-}, async ({ m }) => {
-
-  if (!m.quoted || !m.quoted.mimetype) {
-    return m.reply("Reply to an Image/Video/Audio");
-  }
-
-  try {
-    await m.react('⏫');
-
-    // Download media safely
-    const buffer = await m.quoted.download();
-
-    if (!buffer) {
-      throw new Error("Download failed");
+    name: "url",
+    fromMe: true,
+    desc: "",
+    category: "converters",
+  }, async ({ args, m }) => {
+    if (!m.quoted) {
+      return m.reply('Reply to an Image/Video/Audio');
     }
-
-    // Example upload (you MUST implement this)
-    const url = await handleMediaUpload(buffer);
-
-    if (!url) {
-      throw new Error("Upload failed");
+    try {
+        await m.react('⏫');
+      const mediaBuffer = await m.quoted.download();
+      const mediaUrl = await handleMediaUpload(mediaBuffer);
+      await m.react('✅');
+      m.reply(mediaUrl);
+    } catch (error) {
+        await m.react('❌');
+      m.reply('An error occurred while uploading the media.');
     }
-
-    await m.react('✅');
-    return m.reply(url);
-
-  } catch (err) {
-    console.error(err); // VERY IMPORTANT for debugging
-    await m.react('❌');
-    return m.reply("Error: " + err.message);
-  }
-});
+  });
 
 Sparky(
   {
