@@ -77,8 +77,11 @@
     <br>
 <a href='https://railway.app/new' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=railway&logoColor=white'/></a>
 
-3. **Important**: Add a PostgreSQL database to your project in Railway to store bot data.
-4. | Variable | Description | Required | Default |
+
+3. **Important**: Add a PostgreSQL database to your project in Railway to store bot data
+
+
+5. | Variable | Description | Required | Default |
 | :--- | :--- | :--- | :--- |
 | `SESSION_ID` | Your WhatsApp Session ID | Yes | - |
 | `SUDO` | Owner numbers (e.g., `917012345678`) | Yes | - |
