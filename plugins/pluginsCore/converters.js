@@ -38,8 +38,8 @@ async function addStickerMetaData(stickerBuffer, options) {
 		'sticker-pack-name': (options.packName || ''),
 		'sticker-pack-publisher': (options.authorName || ''),
 		'emojis': (options.categories || ['💖']),
-		'android-app-store-link': 'https://github.com/KichuExe',
-		'ios-app-store-link': 'https://github.com/KichuExe'
+		'android-app-store-link': 'https://github.com/AnanthKriz/KRIZ-BOT-INC',
+		'ios-app-store-link': 'https://github.com/AnanthKriz/KRIZ-BOT-INC'
 	};
 	let exifAttr = Buffer.from([0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00]);
 	let jsonBuffer = Buffer.from(JSON.stringify(json), 'utf8');
