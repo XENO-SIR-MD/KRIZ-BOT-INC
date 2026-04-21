@@ -67,6 +67,18 @@
     <br>
 <a href='https://dashboard.render.com/web/new' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=render&logoColor=white'/></a>
 
+#### DEPLOY TO RAILWAY 
+
+1. If you don't have an account in Railway, create one.
+    <br>
+<a href='https://railway.app/signup' target="_blank"><img alt='railway' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=railway&logoColor=white'/></a>
+
+2. Now Deploy
+    <br>
+<a href='https://railway.app/new' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=railway&logoColor=white'/></a>
+
+3. **Important**: Add a PostgreSQL database to your project in Railway to store bot data.
+
 
 ### Thanks To 
 #### Aswin Sparky
