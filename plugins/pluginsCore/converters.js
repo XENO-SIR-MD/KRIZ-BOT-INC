@@ -57,7 +57,7 @@ async function addExifToWebP(buffer, options) {
 	if (options.packName || options.authorName) {
 		const img = new webp.Image();
 		const json = {
-			"sticker-pack-id": `https://github.com/KichuExe`,
+			"sticker-pack-id": `https://github.com/AnanthKriz/KRIZ-BOT-INC`,
 			"sticker-pack-name": options.packName,
 			"sticker-pack-publisher": options.authorName,
 			emojis: options.categories ? options.categories : [""]
