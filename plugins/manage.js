@@ -6,6 +6,16 @@ const {
 } = require('../lib');
 const {getString, getJson} = require('./pluginsCore');
 const lang = getString('group');
+ 
+Sparky({
+    name: "ping",
+    fromMe: true,
+    desc: "Test bot response",
+    category: "misc",
+},
+async ({ m }) => {
+    return await m.reply("pong");
+});
 
 // Sparky({
 //     name: "antidemote",
@@ -83,7 +93,7 @@ const data = await getJson('https://api.github.com/repos/A-S-W-I-N-S-P-A-R-K-Y/X
 🔸 *Stars:* ${data.stargazers_count}
 🔸 *Forks:* ${data.forks_count}
 🔸 *GitHub Link:* 
-https://github.com/AnanthKriz/KRIZ-BOT-INC
+https://github.com/A-S-W-I-N-S-P-A-R-K-Y/X--BOT--MD
 
 Hey ${m.pushName}!, Don't forget to star and fork my repository!`;
 
@@ -108,7 +118,7 @@ const data = await getJson('https://api.github.com/repos/A-S-W-I-N-S-P-A-R-K-Y/X
 🔸 *Stars:* ${data.stargazers_count}
 🔸 *Forks:* ${data.forks_count}
 🔸 *GitHub Link:* 
-https://github.com/AnanthKriz/KRIZ-BOT-INC
+https://github.com/A-S-W-I-N-S-P-A-R-K-Y/X--BOT--MD
 
 Hey ${m.pushName}!, Don't forget to star and fork my repository!`;
 
