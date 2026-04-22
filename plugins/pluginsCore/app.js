@@ -203,6 +203,7 @@ class appClient {
                 const putRes = await this.render.put('/services/' + appData.id + '/env-vars', newEnv);
                 return putRes.status === 200;
             }
+
             case 'RAILWAY': {
                 if (!config.RAILWAY_API_KEY) {
                     console.error("❌ Missing RAILWAY_API_KEY in config.");
@@ -228,10 +229,16 @@ class appClient {
                             Authorization: `Bearer ${config.RAILWAY_API_KEY}`
                         }
                     });
+                    
+                    if (res.data.errors) {
+                        console.error('❌ Railway API Error:', JSON.stringify(res.data.errors, null, 2));
+                        return false;
+                    }
+                    
                     console.log(`✅ Railway: Successfully set ${key}=${value}`);
-                    return res.data?.data?.variableUpsert || false;
+                    return true;
                 } catch (e) {
-                    console.error('❌ Railway: Failed to set variable:', e.message);
+                    console.error('❌ Railway: Failed to set variable:', e.response ? JSON.stringify(e.response.data, null, 2) : e.message);
                     return false;
                 }
             }
