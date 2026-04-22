@@ -45,7 +45,7 @@ module.exports = {
 	ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE || "false"),
 	BGMBOT : toBool(process.env.BGMBOT || "false"),
 	API: "https://api-aswin-sparky.koyeb.app",
-	AUDIO_DATA: process.env.AUDIO_DATA || "KRIZ BOT INC;XENO SIR;https://files.catbox.moe/e2oxac.jpg",
+	AUDIO_DATA: process.env.AUDIO_DATA || "KRIZ BOT INC;Ananth Kriz;https://files.catbox.moe/e2oxac.jpg",
 	AUTO_STATUS_VIEW: toBool(process.env.AUTO_STATUS_VIEW || "true"),
 	BOT_INFO: process.env.BOT_INFO || "KRIZ-BOT-INC;Ananth Kriz;https://files.catbox.moe/e2oxac.jpg",
 	CALL_BLOCK: toBool(process.env.CALL_BLOCK || "false"),
@@ -61,6 +61,7 @@ module.exports = {
 	KOYEB_SERVICE_NAME: process.env.KOYEB_SERVICE_NAME || process.env.KOYEB_APP_NAME || process.env.KOYEB_NAME || "",
 	RENDER_API_KEY: process.env.RENDER_API_KEY || process.env.RENDER_KEY || "",
 	RENDER_APP_NAME: process.env.RENDER_APP_NAME || process.env.RENDER_NAME || "",
+	RAILWAY_API_KEY: process.env.RAILWAY_API_KEY || "cfc1e528-777f-4cef-aa40-5249e3a24d5e",
 	LANGUAGE: process.env.LANGUAGE || "english",
 	LOGS: toBool(process.env.LOGS || "false"),
 	MENU_TYPE: process.env.MENU_TYPE || "image", // Menu style: big, small, image, document, text, call, payment
