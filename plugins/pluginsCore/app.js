@@ -5,7 +5,7 @@ const git = simpleGit();
 const { exec } = require('child_process');
 const fs = require('fs');
 
-class appClient {
+class Sparky {
     constructor() {
         this.platform = this.detectPlatform();
         
@@ -303,8 +303,6 @@ class appClient {
                 // Railway deleteVar implementation
                 if (!config.RAILWAY_API_KEY) return false;
                 try {
-                    // This is more complex as we need the variable ID or just set it to null?
-                    // Actually Railway has a variableDelete mutation.
                     const query = `
                         mutation variableDelete($input: VariableDeleteInput!) {
                             variableDelete(input: $input)
@@ -399,4 +397,4 @@ class appClient {
     }
 }
 
-module.exports = appClient;
+module.exports = Sparky;
